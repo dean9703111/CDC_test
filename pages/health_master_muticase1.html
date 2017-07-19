@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>疾管署人員</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/jquery.qtip.min.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+</head>
+
+<body>
+     <div id="wrapper">
+<nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">林于瑄</strong>
+                                    </span> <span class="text-muted text-xs block">疾管署人員<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            疾管署人員
+                        </div>
+                    </li>
+                    <li>
+                        <a href="health_master_list.html"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>                        
+                    </li>
+                    <li>
+                     <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                     <ul class="nav nav-second-level collapse">
+                        <li><a href="health_master0_beta.html">個案事件</a></li>
+                        <li><a href="health_master_muticase1.html">群聚事件</a></li>
+                     </ul>
+                  </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master_chart1.html">接觸者追蹤情形</a></li>
+                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
+                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
+                            <li><a href="graph_chartjs.html">Chart.js</a></li>
+                            <li><a href="graph_chartist.html">Chartist</a></li>
+                            <li><a href="c3.html">c3 charts</a></li>
+                            <li><a href="graph_peity.html">Peity Charts</a></li>
+                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>  </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                            <div class="alert alert-success alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            <div class="alert alert-info alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            <div class="alert alert-warning alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            </ul>
+                </li>
+
+
+            </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>群聚事件</h2>
+                    <ol class="breadcrumb">
+                        <li >
+                            事件管理
+                        </li>
+                        <li>
+                            <strong>群聚事件</strong>
+                        </li>
+                        <li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                  <div class="col-lg-12">
+                     <div class="ibox float-e-margins">
+                        <div class="ibox-content">
+                           <div class="row">
+                                    <div class="col-sm-5 m-b-xs">
+                                        <h2>台北疾管署</h2>
+                                    </div>
+
+                                </div>
+                           <div class="ibox-title">
+                              <div class="ibox-tools">
+                                 <div class="search-form">
+                                    <form action="health_loacal_case2.html" method="get">
+                                       <div class="input-group">
+                                          <input type="text" placeholder="事件名稱" name="search" class="form-control ">
+                                          <div class="input-group-btn">
+                                             <button class="btn btn-primary" onclick="location.href='health_loacal_case2.html'">
+                                             搜尋事件
+                                             </button>
+                                          </div>
+                                       </div>
+                                    </form>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="panel-body">
+                              <div class="panel-group" id="accordion">
+                                 <div class="panel panel-default">
+                                    <div class="panel-heading" style="position: relative">
+                                       <h5 class="panel-title" >
+                                           <label style="color:blue">[麻疹]</label>  
+                                          <a style="position: relative" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">                                                    
+                                          東山幼兒園群聚麻疹</a>
+                                          <label style="color:red">確診個案人數：3人 / 接觸者人數:259人</label>                                                    
+
+                                          <label style="position: absolute;right: 10px">2017-05-23</label>
+                                       </h5>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                       <div class="panel-body">
+                                          <div class="table-responsive">
+                                             <table class="table table-striped">
+                                                <thead>
+                                                   <tr>
+                                                      <th>通報單編號 </th>
+                                                      <th>疾病名</th>
+                                                      <th>居住地 </th>
+                                                      <th>出疹日</th>
+                                                      <th>追蹤截止日</th>
+                                                      <th>接觸者人數</th>
+                                                      <th>症狀人數</th>
+                                                      <th></th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>XDS31234XD</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/13</td>
+                                                      <td>2015/06/13</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>GRR11651651</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/07/05</td>
+                                                      <td>2015/07/05</td>
+                                                      <td>6</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>FEW48181919</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/05</td>
+                                                      <td>2015/06/05</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="panel panel-default">
+                                    <div class="panel-heading" style="position: relative">
+                                       <h5 class="panel-title" >
+                                           <label style="color:blue">[A型流感]</label>  
+                                          <a style="position: relative" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">                                                    
+                                          北台灣大學爆發A型流感</a>      <label style="color:red">確診個案人數：5人 / 接觸者人數:59人</label>                                              
+                                          <label style="position: absolute;right: 10px">2017-05-23</label>
+                                       </h5>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                       <div class="panel-body">
+                                          <div class="table-responsive">
+                                             <table class="table table-striped">
+                                                <thead>
+                                                   <tr>
+                                                      <th>通報單編號 </th>
+                                                      <th>疾病名</th>
+                                                      <th>居住地 </th>
+                                                      <th>出疹日</th>
+                                                      <th>追蹤截止日</th>
+                                                      <th>接觸者人數</th>
+                                                      <th>症狀人數</th>
+                                                      <th></th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>XDS31234XD</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/13</td>
+                                                      <td>2015/06/13</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>GRR11651651</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/07/05</td>
+                                                      <td>2015/07/05</td>
+                                                      <td>6</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>FEW48181919</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/05</td>
+                                                      <td>2015/06/05</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="panel panel-default">
+                                    <div class="panel-heading" style="position: relative">
+                                       <h5 class="panel-title" >
+                                           <label style="color:blue">[新型流感]</label>  
+                                          <a style="position: relative" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="collapsed">                                                    
+                                          西門新型流感</a> <label style="color:red">確診個案人數：53人 / 接觸者人數:2321人</label>                                                   
+                                          <label style="position: absolute;right: 10px">2017-05-23</label>
+                                       </h5>
+                                    </div>
+                                    <div id="collapseOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                       <div class="panel-body">
+                                          <div class="table-responsive">
+                                             <table class="table table-striped">
+                                                <thead>
+                                                   <tr>
+                                                      <th>通報單編號 </th>
+                                                      <th>疾病名</th>
+                                                      <th>居住地 </th>
+                                                      <th>出疹日</th>
+                                                      <th>追蹤截止日</th>
+                                                      <th>接觸者人數</th>
+                                                      <th>症狀人數</th>
+                                                      <th></th>
+                                                   </tr>
+                                                </thead>
+                                                <tbody>
+                                                   <tr>
+                                                      <td>XDS31234XD</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/13</td>
+                                                      <td>2015/06/13</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>GRR11651651</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/07/05</td>
+                                                      <td>2015/07/05</td>
+                                                      <td>6</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>FEW48181919</td>
+                                                      <td>麻疹</td>
+                                                      <td>台北</td>
+                                                      <td>2014/06/05</td>
+                                                      <td>2015/06/05</td>
+                                                      <td>13</td>
+                                                      <td>5</td>
+                                                      <td>
+                                                         <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master1.html'">檢視/修改</button>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/jquery.qtip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            $('a[href][title]').qtip({
+                    content: {
+                        text: false // Use each elements title attribute
+                    },
+                    style: 'qtip-blue' // Give it some style
+                });
+        });
+    </script>
+    
+</body>
+
+
+
+</html>

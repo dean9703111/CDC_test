@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>疾管署人員</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">林于瑄</strong>
+                                    </span> <span class="text-muted text-xs block">疾管署人員<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            疾管署人員
+                        </div>
+                    </li>
+                    <li>
+                        <a href="health_master_list.html"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master0_beta.html">個案事件</a></li>
+                            <li><a href="health_master_muticase1.html">群聚事件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master_chart1.html">接觸者追蹤情形</a></li>
+                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
+                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
+                            <li><a href="graph_chartjs.html">Chart.js</a></li>
+                            <li><a href="graph_chartist.html">Chartist</a></li>
+                            <li><a href="c3.html">c3 charts</a></li>
+                            <li><a href="graph_peity.html">Peity Charts</a></li>
+                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>  </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <div class="alert alert-success alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-info alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-8">
+                    <h2>待辦清單</h2>
+                    <ol class="breadcrumb">
+                        <li class="active">
+                            <strong>待辦清單</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tabs-container">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1"> 轉介</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-2">退回</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-3">提醒</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-12 b-r">
+                                                <table class="table table-striped ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th> <a data-toggle="modal" href="#test-modal"><img src="img/menu_select.jpg" width="20" /></a></th>
+                                                            <th>通報單編號 </th>
+                                                            <th>疾病名</th>
+                                                            <th>接觸者 </th>
+                                                            <th>來源單位</th>
+                                                            <th>目標轉介單位</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>台東市衛生局</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    轉介
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>台東市衛生局</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    轉介
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>台東市衛生局</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    轉介
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>台東市衛生局</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    轉介
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <button class="btn col-lg-6 btn-outline btn-primary" type="submit">
+                                                                    全部轉介
+                                                                </button>
+                                                                <button class="btn col-lg-6 btn-outline btn-danger" type="submit">
+                                                                    全部拒絕
+                                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-sm-12 b-r">
+                                                <table class="table table-striped ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th> <a data-toggle="modal" href="#test-modal"><img src="img/menu_select.jpg" width="20" /></a></th>
+                                                            <th>通報單編號 </th>
+                                                            <th>疾病名</th>
+                                                            <th>接觸者 </th>
+                                                            <th>退回單位</th>
+                                                            <th>理由</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>這是一個漏掉的校園群聚接觸者</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    允許
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>這是一個漏掉的校園群聚接觸者</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    允許
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>這是一個漏掉的校園群聚接觸者</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    允許
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                            <td>XDS31234XD</td>
+                                                            <td>麻疹</td>
+                                                            <td>黃自安</td>
+                                                            <td>台北市衛生局</td>
+                                                            <td>這是一個漏掉的校園群聚接觸者</td>
+                                                            <td>
+                                                                <button class="btn btn-primary btn-sm" type="submit">
+                                                                    允許
+                                                                </button>
+                                                                <button class="btn btn-danger btn-sm" type="submit">
+                                                                    拒絕
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <button class="btn col-lg-6  btn-outline btn-primary" type="submit">
+                                                                    全部允許
+                                                                </button>
+                                                <button class="btn col-lg-6  btn-outline btn-danger" type="submit">
+                                                                    全部拒絕
+                                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-3" class="tab-pane">
+                                    <div class="panel-body">
+                                        <div class="table-responsive">
+                                            <table id="example" class="table table-stripped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>單位</th>
+                                                        <th>動作</th>
+                                                        <th>描述</th>
+                                                        <th>時間</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>台北市衛生局</td>
+                                                        <td>轉介</td>
+                                                        <td>個案編號ETR1055548有3筆接觸者轉介到新北市衛生局</td>
+                                                        <td>2016-12-15 15:23:23</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>台北市衛生局</td>
+                                                        <td>派案</td>
+                                                        <td>個案編號ETR1055548有3筆接觸者派案到新北市衛生局</td>
+                                                        <td>2016-12-15 15:23:23</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>台北市衛生局</td>
+                                                        <td>回報</td>
+                                                        <td>完成2016/08/14日的回報</td>
+                                                        <td>2016-12-15 15:23:23</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+
+
+                                            <div class="ibox collapsed">
+                                                <div style="background-color:#DDDDDD" class="ibox-title">
+                                                    <h5>已讀提醒</h5>
+                                                    <div class="ibox-tools">
+                                                        <a class="collapse-link">點擊展開
+                                       <i class="fa fa-chevron-up"></i>
+                                       </a>
+                                                    </div>
+                                                </div>
+                                                <div style="background-color:#F0F0F0" class="ibox-content">
+                                                    <table id="example" class="table table-stripped">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>單位</th>
+                                                                <th>動作</th>
+                                                                <th>描述</th>
+                                                                <th>時間</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>台北市衛生局</td>
+                                                                <td>轉介</td>
+                                                                <td>個案編號ETR1055548有3筆接觸者轉介到新北市衛生局</td>
+                                                                <td>2016-12-15 15:23:23</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>台北市衛生局</td>
+                                                                <td>派案</td>
+                                                                <td>個案編號ETR1055548有3筆接觸者派案到新北市衛生局</td>
+                                                                <td>2016-12-15 15:23:23</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>台北市衛生局</td>
+                                                                <td>回報</td>
+                                                                <td>完成2016/08/14日的回報</td>
+                                                                <td>2016-12-15 15:23:23</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer">
+            </div>
+
+        </div>
+    </div>
+    <div id="test-modal" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:400px">
+                <div class="modal-body">
+                    <div class="row">
+                        <table>
+                            <tr>
+                                <td style="padding-left:20px">
+                                    <h2 style="font-weight:bold">篩選條件(接觸地點)</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="padding-top:30px;padding-left:20px" class="more">
+
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">住家</a>
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">辦公室</a>
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">學校</a>
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">公車</a>
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">捷運</a>
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">高鐵</a>
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-warning  btn-rounded" href="#">其他</a>
+                            </div>
+                            <button type="button" class="btn btn-w-m btn-success">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+        function change_date() {
+            $("#iwantochange").html("<input id='now_date' style='margin-right:10px' type='date'><button type='button' class='btn btn-sm btn-success' onclick='change_text()'>儲存</button>");
+        }
+        function change_text() {
+            $("#iwantochange").html($("#now_date").val());
+        }
+    </script>
+</body>
+
+
+
+</html>

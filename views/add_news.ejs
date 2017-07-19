@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>疾管署人員</title>
+
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../stylesheets/animate.css" rel="stylesheet">
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <link href="../stylesheets/jquery.qtip.min.css" rel="stylesheet">
+
+    <link href="../stylesheets/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+</head>
+
+<body>
+ <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="../img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold"><%= name %></strong>
+                                    </span> <span class="text-muted text-xs block"><%= identity %><b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="/">登出</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <%= identity %>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/view/waiting_case"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/view/one_case">個案事件</a></li>
+                            <li><a href="/view/muti_case">群聚事件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/view/trace_report_chart">接觸者追蹤情形</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                            <div class="alert alert-success alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            <div class="alert alert-info alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            <div class="alert alert-warning alert-dismissable">
+                                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                            </div>
+                            </ul>
+                </li>
+
+
+            </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>問卷編輯</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            事件管理
+                        </li>
+                        <li class="active">
+                            <a href="/view/one_case">個案事件</a>
+                        </li>
+                         <li>
+                            <strong>問卷編輯</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+             <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                    <div class="tabs-container">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">產生QRcode</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">回報人員管理</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-3">新聞稿管理</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                   <div class="ibox-content">
+                            <form id="form" action="#" class="wizard-big">
+                                <h1>選擇問卷欄位</h1>
+                                <fieldset style="position:relative">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1  class="col-lg-12" style="font-weight:bold">基本資料:</h1>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            姓名
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            居住地
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            生日
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            手機
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            最近最近是否出國
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>                                           
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                       <label style="width:105px">
+                                                            是否懷孕
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            是否接種過疫苗
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            接觸地點
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <h1  class="col-lg-12" style="font-weight:bold">症狀:</h1>
+                                             <table class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            是否發燒
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            有無出疹子
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            有無結膜炎
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            有無咳嗽
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            有無流鼻水
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-4">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            是否接種過疫苗
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table  class="col-lg-6">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            問卷有效期
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                         <input id="surname" name="surname" type="text" class="form-control" value="2017-06-30">                                                          
+                                                    </td>
+                                                    <td>~</td>
+                                                    <td><input id="surname" name="surname" type="text" class="form-control"  value="2017-07-30"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding:10px 10px">
+                                                        <button class="form-control btn-primary" style="width:110px" data-toggle="modal" href="#modal1"  ><i class="fa fa-plus-square"></i>新增題目</button>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </fieldset>
+                                <h1>問卷預覽</h1>
+                                <fieldset style="position:relative">
+                                    <div class="row">
+                                        <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            最近最近是否出國
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 是 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 否 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            是否發燒
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                         <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 是 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 否 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                       <label style="width:105px">
+                                                            是否懷孕
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                         <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 是 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 否 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            是否接種過疫苗
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                         <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 是 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 否 </label>                                            
+                                                </div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            姓名
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                         <input id="surname" name="surname" type="text" class="form-control">
+                                                    </td>
+                                                    <td  style="padding-left:20px">
+                                                        <label style="width:105px">
+                                                            生日
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <input id="surname" name="surname" type="text" class="form-control">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            <table style="margin-bottom:10px">
+                                                <tr>
+                                                    <td >
+                                                        <label style="width:105px">
+                                                            居住地
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <input id="surname" name="surname" type="text" class="form-control">
+                                                    </td>
+                                                    <td style="padding-left:20px">
+                                                        <label style="width:105px">
+                                                            手機
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <input id="surname" name="surname" type="text" class="form-control">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                    </div>
+                                </fieldset>
+
+                                <h1>QRcode預覽</h1>
+                                <fieldset>
+                                    <div class="text-center" >
+                                        <img src="../img/fakeqrcode.png">
+                                        <br>
+                                        <a href="http://www.cdc.gov.tw/rwd">http://www.cdc.gov.tw/rwd</a>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                                </div>
+                            </div>
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th><input type="checkbox" class="i-checks" name="input[]">全選</th>
+                                                <th>姓名 </th>
+                                                <th>居住地</th>
+                                                <th>生日 </th>
+                                                <th>手機</th>
+                                                <th>症狀</th>
+                                                <th>新聞稿</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                <td>李來風</td>
+                                                <td>台北</td>
+                                                <td>82/09/30</td>
+                                                <td>0930777888</td>
+                                                <td>流鼻水</td>
+                                                <td>西門群聚感染</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                <td>李來風</td>
+                                                <td>台北</td>
+                                                <td>82/09/30</td>
+                                                <td>0930777888</td>
+                                                <td></td>
+                                                <td>北車麻疹</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>                                                
+                                                <td>李來風</td>
+                                                <td>台北</td>
+                                                <td>82/09/30</td>
+                                                <td>0930777888</td>
+                                                <td>咳嗽</td>
+                                                <td>西門群聚感染</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                    
+                                </div>
+                                <button type="button" class="btn btn-w-m btn-success">加入接觸者名冊</button>
+                                <button type="button" class="btn btn-danger">刪除</button>
+                                </div>
+                            </div>
+                            <div id="tab-3" class="tab-pane">
+                                <div class="panel-body">
+                                    <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>新聞稿 </th>
+                                                <th>通報單編號</th>
+                                                <th>功能 </th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>西門群聚感染</td>
+                                                <td>台北</td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                               
+                                                </div>
+                                                </td>
+                                                <td><button class="btn btn-success btn-outline" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class="bold">修改問卷</span></button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>北車麻疹</td>
+                                                <td>台北</td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                              
+                                                </div>
+                                                </td>
+                                                <td><button class="btn btn-success btn-outline" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class="bold">修改問卷</span></button></td>
+                                            </tr>
+                                            <tr>                                             
+                                                <td>東區登革熱</td>
+                                                <td>台北</td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                    <label class="btn btn-sm btn-white"> <input type="radio" id="option1" name="options"> 開 </label>
+                                                    <label class="btn btn-sm btn-white active"> <input type="radio" id="option2" name="options"> 關 </label>                                            
+                                                </div>
+                                                </td>
+                                                <td><button class="btn btn-success btn-outline" type="button"><i class="fa fa-pencil"></i>&nbsp;&nbsp;<span class="bold">修改問卷</span></button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>                                    
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                    
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+
+        </div>
+    </div>
+    <div id="modal1" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <center>
+                        <h2 style="font-weight:bold">設計題目</h2>
+                    </center>
+
+                    <div class="tabs-container" style="margin-bottom:15px">
+
+                        <div class="tabs-left">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-6">是非題</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-7">選擇題</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-8">填充題</a></li>
+                            </ul>
+                            <div class="tab-content ">
+                                <div id="tab-6" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <label>題目名稱：</label><input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div id="tab-7" class="tab-pane">
+                                    <div class="panel-body">
+                                        <label style="margin-bottom:10px">題目名稱：</label><input type="text" class="form-control" style="margin-bottom:10px">
+                                        <label style="margin-bottom:10px">選項：</label>
+                                        <input type="text" class="form-control col-lg-2" style="margin-bottom:10px">
+                                        <input type="text" class="form-control col-lg-2" style="margin-bottom:10px">
+                                        <input type="text" class="form-control col-lg-2">
+                                    </div>
+                                </div>
+                                <div id="tab-8" class="tab-pane">
+                                    <div class="panel-body">
+                                        <label>題目名稱：</label><input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>
+                        <button type="button" class="btn btn-block btn-outline btn-primary">新增題目</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="../javascripts/jquery-3.1.1.min.js"></script>
+    <script src="../javascripts/bootstrap.min.js"></script>
+    <script src="../javascripts/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../javascripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="../javascripts/inspinia.js"></script>
+    <script src="../javascripts/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="../javascripts/plugins/iCheck/icheck.min.js"></script>
+    <script src="../javascripts/jquery.qtip.min.js"></script>
+    <!-- Steps -->
+    <script src="../javascripts/plugins/steps/jquery.steps.min.js"></script>
+
+    <!-- Jquery Validate -->
+    <script src="../javascripts/plugins/validate/jquery.validate.min.js"></script>
+    <script src="../javascripts/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            $('a[href][title]').qtip({
+                content: {
+                    text: false // Use each elements title attribute
+                },
+                style: 'qtip-blue' // Give it some style
+            });
+        }); 
+    </script>
+<script>
+        $(document).ready(function(){
+            $("#wizard").steps();
+            $("#form").steps({
+                bodyTag: "fieldset",
+                onStepChanging: function (event, currentIndex, newIndex)
+                {
+                    // Always allow going backward even if the current step contains invalid fields!
+                    if (currentIndex > newIndex)
+                    {
+                        return true;
+                    }
+
+                    // Forbid suppressing "Warning" step if the user is to young
+                    if (newIndex === 3 && Number($("#age").val()) < 18)
+                    {
+                        return false;
+                    }
+
+                    var form = $(this);
+
+                    // Clean up if user went backward before
+                    if (currentIndex < newIndex)
+                    {
+                        // To remove error styles
+                        $(".body:eq(" + newIndex + ") label.error", form).remove();
+                        $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                    }
+
+                    // Disable validation on fields that are disabled or hidden.
+                    form.validate().settings.ignore = ":disabled,:hidden";
+
+                    // Start validation; Prevent going forward if false
+                    return form.valid();
+                },
+                onStepChanged: function (event, currentIndex, priorIndex)
+                {
+                    // Suppress (skip) "Warning" step if the user is old enough.
+                    if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                    {
+                        $(this).steps("next");
+                    }
+
+                    // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                    if (currentIndex === 2 && priorIndex === 3)
+                    {
+                        $(this).steps("previous");
+                    }
+                },
+                onFinishing: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Disable validation on fields that are disabled.
+                    // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                    form.validate().settings.ignore = ":disabled";
+
+                    // Start validation; Prevent form submission if false
+                    return form.valid();
+                },
+                onFinished: function (event, currentIndex)
+                {
+                    var form = $(this);
+
+                    // Submit form input
+                    form.submit();
+                }
+            }).validate({
+                        errorPlacement: function (error, element)
+                        {
+                            element.before(error);
+                        },
+                        rules: {
+                            confirm: {
+                                equalTo: "#password"
+                            }
+                        }
+                    });
+       });
+    </script>
+</body>
+
+
+
+</html>

@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title><%= identity %></title>
+
+    <link href="../stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../stylesheets/animate.css" rel="stylesheet">
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <style>
+        table,
+        td {
+            vertical-align: middle;
+        }
+        /*.footable tr{
+            background-color: #FDFFFF;
+            transition: background 0.5s linear;
+        }
+        .footable tr:hover {
+            background-color: #BBFFFF;
+            transition: background 0.5s linear;
+        }*/
+        .c--anim-btn span {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .c--anim-btn,
+        .c-anim-btn {
+            transition: 0.5s;
+        }
+
+        .c--anim-btn {
+            height: 30px;
+            font: normal normal 500 1em/4em Microsoft JhengHei;
+            overflow: hidden;
+            width: 38px;
+        }
+
+        .c-anim-btn {
+            margin-top: -1em;
+        }
+
+        .c--anim-btn:hover .c-anim-btn {
+            margin-top: -5em;
+        }
+        /**/
+
+        .c--anim-btn1 span {
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .c--anim-btn1,
+        .c-anim-btn1 {
+            transition: 0.5s;
+        }
+
+        .c--anim-btn1 {
+            height: 40px;
+            font: normal normal 500 1em/4em Microsoft JhengHei;
+            overflow: hidden;
+            width: 38px;
+        }
+
+        .c-anim-btn1 {
+            margin-top: -1em;
+        }
+
+        .c--anim-btn1:hover .c-anim-btn1 {
+            margin-top: -3.7em;
+        }
+
+
+        .raised {
+            transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0.2s;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        }
+
+        .raised:active {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+            transition-delay: 0s;
+        }
+
+        .raised_big {
+            transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            transition-delay: 0.2s;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.26);
+        }
+/*
+        .raised_big:active {
+            box-shadow: 0 16px 34px 0 rgba(0, 0, 0, 0.2);
+            transition-delay: 0s;
+        }*/
+
+
+
+
+
+
+        .sub-menu-parent {
+            position: relative;
+        }
+
+        .sub-menu {
+            width: 150px;
+            height: 130px;
+            background-color: white;
+            z-index: 99999999999;
+            visibility: hidden;
+            /* hides sub-menu */
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 10px 10px;
+            transform: translateY(-2em);
+            transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+        }
+
+        .sub-menu-parent:hover .sub-menu {
+            visibility: visible;
+            /* shows sub-menu */
+            opacity: 1;
+            z-index: 99999999999;
+            transform: translateY(0%);
+            transition-delay: 0s, 0s, 0.3s;
+            /* this removes the transition delay so the menu will be visible while the other styles transition */
+        }
+
+
+
+
+
+        .wskLabel {
+        cursor: pointer;
+        font-size: 12pt;
+        display: block;
+        overflow: hidden;
+        padding-top: 10px;
+        position: relative;
+        min-height:40px;
+        }
+
+        .wskCheckbox {
+        border: 2px solid 	#9D9D9D;
+        color: #1d1d1d;
+        cursor: pointer;
+        display: inline-block;
+        height: 22px;
+        outline-color: #eaeaea;
+        padding: 0;
+        position:relative;
+        width: 22px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        z-index:1;
+        }
+
+        .wskCheckbox.checked {
+        border-left: 2px solid green;
+        border-bottom: 4px solid green;
+        border-top: 1px solid rgba(0,0,0,0);
+        border-right: 1px solid rgba(0,0,0,0);
+        -webkit-transform: rotate(-45deg) scaleY(0.5);
+        -moz-transform: rotate(-45deg) scaleY(0.5);
+        -ms-transform: rotate(-45deg) scaleY(0.5);
+        -o-transform: rotate(-45deg) scaleY(0.5);
+        transform: rotate(-45deg) scaleY(0.5);
+        }
+
+        input[type='checkbox'].wskCheckbox {
+        display: none;
+        }
+
+        .wskCircle {
+        background-color:#ccdffd;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        display: block;
+        height: 25px;
+        left: -1px;
+        opacity: 0;
+        position: absolute;
+        top: 9px;
+        -webkit-transition: all 0.15s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        transition: all 0.15s ease-in-out;
+        width: 25px;
+        z-index:0;
+        }
+
+        .wskCircle.show {
+        opacity: 1;
+        }
+
+        .wskCircle.flipColor {
+        background-color: #d2d3d2;
+        }
+
+
+    </style>
+</head>
+
+<body style="overflow-x: visible;">
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="../img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold"><%= name %></strong>
+                                    </span> <span class="text-muted text-xs block"><%= identity %><b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="/">登出</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            <%= identity %>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/view/waiting_case"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/view/one_case">個案事件</a></li>
+                            <li><a href="/view/muti_case">群聚事件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="/view/trace_report_chart">接觸者追蹤情形</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <div class="alert alert-success alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-info alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="/view/view_case?disease=measles">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading raised">
+                <div class="col-lg-8">
+                    <h2>個案事件</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            事件管理
+                        </li>
+                        <li class="active">
+                            <strong>個案事件</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+
+                            <div class="ibox-title raised_big">
+                                <div class="ibox-tools">
+                                    <div class="search-form">
+
+                                        <div id="data_5" class="col-lg-6" style="margin-bottom:10px;text-align:center">
+                                            <div class="col-sm-4">
+                                                <h3>個案確診日期:</h3>
+                                            </div>
+                                            <div class="col-sm-8 input-daterange input-group" id="datepicker">
+                                                <div class="input-group date">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                    <input type="text" class="form-control" value="03/04/2017">
+                                                </div>
+                                                <span class="input-group-addon">to</span>
+                                                <div class="input-group date">
+                                                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                                                    <input type="text" class="form-control" value="03/09/2017">
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group" class="col-lg-6">
+
+                                            <input type="text" placeholder="通報單號、個案確診日期、姓名" name="search" class="form-control ">
+
+                                            <div class="input-group-btn">
+                                                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">未結案<span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">未結案</a></li>
+                                                    <li><a href="#">已結案</a></li>
+                                                    <li><a href="#">全部</a></li>
+                                                </ul>
+                                                <button class="btn btn-primary">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-search"></i>
+                                                        </span>
+                                                        <span>
+                                                            查詢
+                                                        </span>
+                                                        </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+
+                                    <table class="footable table table-stripped" data-sorting="true" data-page-size="6" data-show-toggle="false" data-expand-first="true">
+                                        <thead style="font-size:16px">
+                                            <tr>
+                                                <th data-sort-ignore="true"></th>
+                                                <th data-toggle="true" data-sort-ignore="true">通報單編號</th>
+                                                <th data-hide="tablet,phone,test">疾病名</th>
+                                                <th data-hide="phone,test">居住地 </th>
+                                                <th data-hide="phone,test">發病日</th>
+                                                <th data-hide="tablet,phone,test">確診日</th>
+                                                <th data-hide="tablet,phone,test">症狀人數</th>
+                                                <th data-hide="phone,test">接觸者人數</th>
+                                                <th data-hide="test" data-sort-ignore="true"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="font-size:15px">
+                                            <tr style="background: linear-gradient(to right,#FFEEDD,	#FFFAF4);">
+                                                <td><input type="checkbox" id="anId1" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId1"></label>
+                                                </td>
+                                                <td style="font-size:13px">FEW48181919</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td id="iwantochange">06-05</td>
+                                                <td>06-05</td>
+                                                <td><label style="color:red">2</label></td>
+                                                <td>10
+                                                    <div class="sub-menu-parent" style="    display: inline">
+                                                        <button style="padding:3px 8px" class="btn btn-default dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                   <img src="../img/work_wait.png" width="20" />
+                                                                                </button>
+                                                        <ul class="sub-menu">
+                                                            <mdall>
+                                                                <h4 style="color:red">派送進度:38/60</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 60%;" class="progress-bar"></div>
+                                                            </div>
+                                                            <mdall>
+                                                                <h4 style="color:red">回報進度:28/80</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 30%;" class="progress-bar progress-bar-success"></div>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised" onclick="location.href='/view/view_case?disease=measles'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr style="background: linear-gradient(to right,#FFD2D2,#FFECEC);">
+                                                <td><input type="checkbox" id="anId2" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId2"></label>
+                                                 </td>
+                                                <td style="font-size:13px;min-width:130px">XDS31234XD</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td><label style="color:red">-</label></td>
+                                                <td>-
+                                                </td>
+                                                <td style="min-width:150px">
+                                                    <button style="margin-left:40px" type="button" class="btn c--anim-btn btn-xs btn-info raised" onclick="location.href='/view/view_case?disease=measles'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId3" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId3"></label></td>
+                                                <td style="font-size:13px">GRR11651651</td>
+                                                <td>A型流感</td>
+                                                <td>台北</td>
+                                                <td>07-05</td>
+                                                <td>07-05</td>
+                                                <td><label style="color:red">9</label></td>
+                                                <td>16
+                                                    <div class="sub-menu-parent" style="    display: inline">
+                                                        <button style="padding:3px 8px" class="btn btn-default dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                   <img src="../img/work_down.png" width="20" />
+                                                                                </button>
+                                                        <ul class="sub-menu">
+                                                            <mdall>
+                                                                <h4>派送進度:60/60</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar"></div>
+                                                            </div>
+                                                            <mdall>
+                                                                <h4>回報進度:80/80</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar progress-bar-success"></div>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised" onclick="location.href='/view/view_case?disease=influenza'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td><input type="checkbox" id="anId4" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId4"></label></td>
+                                                <td style="font-size:13px">XDS31234XD</td>
+                                                <td>A型流感</td>
+                                                <td>台北</td>
+                                                <td >－</td>
+                                                <td>－</td>
+                                                <td>－</td>
+                                                <td>13
+
+                                                    <div class="sub-menu-parent" style="    display: inline">
+                                                        <button style="padding:3px 8px" class="btn btn-default dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                   <img src="../img/work_down.png" width="20" />
+                                                                                </button>
+                                                        <ul class="sub-menu">
+                                                            <mdall>
+                                                                <h4 style="color:red">派送進度:60/60</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar"></div>
+                                                            </div>
+                                                            <mdall>
+                                                                <h4 style="color:red">回報進度:80/80</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar progress-bar-success"></div>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+
+
+
+
+                                                </td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised"  onclick="location.href='/view/view_case?disease=influenza'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId5" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId5"></label></td>
+                                                <td style="font-size:13px">GRR11651651</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td>07-05</td>
+                                                <td>07-05</td>
+                                                <td><label style="color:red">9</label></td>
+                                                <td>16
+                                                    <div class="sub-menu-parent" style="    display: inline">
+                                                        <button style="padding:3px 8px" class="btn btn-default dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                   <img src="../img/work_down.png" width="20" />
+                                                                                </button>
+                                                        <ul class="sub-menu">
+                                                            <mdall>
+                                                                <h4 style="color:red">派送進度:60/60</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar"></div>
+                                                            </div>
+                                                            <mdall>
+                                                                <h4 style="color:red">回報進度:80/80</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar progress-bar-success"></div>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised"  onclick="location.href='/view/view_case?disease=measles'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId6" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId6"></label></td>
+                                                <td style="font-size:13px">FEW48181919</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>-</td>
+                                                <td>10
+                                                    <div class="sub-menu-parent" style="    display: inline">
+                                                        <button style="padding:3px 8px" class="btn btn-default dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                   <img src="../img/work_down.png" width="20" />
+                                                                                </button>
+                                                        <ul class="sub-menu">
+                                                            <mdall>
+                                                                <h4 style="color:red">派送進度:60/60</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar"></div>
+                                                            </div>
+                                                            <mdall>
+                                                                <h4 style="color:red">回報進度:80/80</h4>
+                                                            </mdall>
+                                                            <div class="progress progress-striped active m-b-sm">
+                                                                <div style="width: 100%;" class="progress-bar progress-bar-success"></div>
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised"  onclick="location.href='/view/view_case?disease=measles'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId7" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId7"></label></td>
+                                                <td style="font-size:13px">XDS31234XD</td>
+                                                <td>A型流感</td>
+                                                <td>台北</td>
+                                                <td>08-13</td>
+                                                <td>08-13</td>
+                                                <td><label style="color:red">7</label></td>
+                                                <td>13<button class="btn btn-default raised" style="padding:3px 8px"><img src="../img/work_down.png" width="20" /></td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised" onclick="location.href='/view/view_case?disease=influenza'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId8" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId8"></label></td>
+                                                <td style="font-size:13px">GRR11651651</td>
+                                                <td>A型流感</td>
+                                                <td>台北</td>
+                                                <td>07-05</td>
+                                                <td>07-05</td>
+                                                <td><label style="color:red">9</label></td>
+                                                <td>16<button class="btn btn-default" style="padding:3px 8px"><img src="../img/work_down.png" width="20" /></td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised" onclick="location.href='/view/view_case?disease=influenza'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="checkbox" id="anId9" class="wskCheckbox" />
+                                                    <label class="wskLabel" for="anId9"></label></td>
+                                                <td style="font-size:13px">FEW48181919</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td>06-05</td>
+                                                <td>06-05</td>
+                                                <td><label style="color:red">2</label></td>
+                                                <td>10<button class="btn btn-default" style="padding:3px 8px"><img src="../img/work_down.png" width="20" /></td>
+                                                <td>
+                                                    <button type="button" title="下載接觸者名冊" class="btn c--anim-btn btn-xs btn-primary raised">
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-download"></i>
+                                                        </span>
+                                                        <span>
+                                                            下載
+                                                        </span>
+                                                    </button>
+                                                    <button type="button" class="btn c--anim-btn btn-xs btn-info raised"  onclick="location.href='/view/view_case?disease=measles'">                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-eye"></i>
+                                                        </span>
+                                                        <span>
+                                                            檢視
+                                                        </span>
+                                                        </button>
+                                                    <button type="button" title="編輯發病日期" class="btn c--anim-btn btn-xs btn-warning raised" onclick="change_date()">
+                                                        
+                                                        <span class="c-anim-btn">
+                                                            <i class="fa fa-edit"></i>
+                                                        </span>
+                                                        <span>
+                                                            編輯
+                                                        </span>
+                                                        </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="9">
+                                                    <ul class="pagination pull-right"></ul>
+                                                </td>
+                                            </tr>
+                                            <% if (Number(authority) <= 4) { %>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <button id="create_event" type="button" class="btn c--anim-btn1 raised" style="width:120px;height:40px;background-color:	#97CBFF ;color:white"
+                                                        onclick="location.href='/view/add_muti_case'">
+                                                        
+                                                        <span class="c-anim-btn1" style="font-size:16px">                                                            
+                                                            建立群聚事件
+                                                        </span>
+                                                        <span>
+                                                            <i class="fa fa-group fa-2x"></i>
+                                                        </span>
+                                                    </button>
+                                                    <button id="news_report" type="button" class="btn c--anim-btn1 raised" style="margin-left:10px;width:120px;height:40px;background-color:#FFB5B5 ;color:white"
+                                                        onclick="location.href='/view/add_news'">
+                                                        
+                                                        <span class="c-anim-btn1"  style="font-size:16px">                                                            
+                                                            新聞稿回報
+                                                        </span>
+                                                        <span>
+                                                            
+                                                            <i class="fa fa-send-o fa-2x"></i>
+                                                        </span>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                            <% } %>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <button style="width:0px;height:0px;background-color:white" class="btn "></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+
+        </div>
+    </div>
+    <div id="percent-modal" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:400px">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <mdall>
+                                <h2 style="color:red">派送進度:38/60</h2>
+                            </mdall>
+                            <div class="progress progress-striped active m-b-sm">
+                                <div style="width: 60%;" class="progress-bar"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <mdall>
+                                <h2 style="color:red">回報進度:28/80</h2>
+                            </mdall>
+                            <div class="progress progress-striped active m-b-sm">
+                                <div style="width: 30%;" class="progress-bar progress-bar-success"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="../javascripts/jquery-3.1.1.min.js"></script>
+    <script src="../javascripts/bootstrap.min.js"></script>
+    <script src="../javascripts/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../javascripts/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="../javascripts/plugins/footable/footable.all.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="../javascripts/inspinia.js"></script>
+    <script src="../javascripts/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="../javascripts/plugins/iCheck/icheck.min.js"></script>
+    <!-- Data picker -->
+    <script src="../javascripts/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- Clock picker -->
+    <script src="../javascripts/plugins/clockpicker/clockpicker.js"></script>
+    <!-- Date range picker -->
+    <script src="../javascripts/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../javascripts/jquery.qtip.min.js"></script>
+    <script>
+        /*$(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });            
+        });*/
+        var check_count = 0,repeat_a=1,repeat_b=0;
+
+        /*
+        $('input').on('ifChecked', function(event){
+            check_count++;
+            if(check_count>1 && repeat_b==0){
+                repeat_b=1;
+                repeat_a=0;
+                var cl1 = "#97CBFF";
+                var cl2 = "#0080FF";
+                var elm = document.getElementById("create_event");
+                T  = fadeText(cl1,cl2,elm);
+                //$('#create_event').css("background-color","#97CBFF");
+                //$('#news_report').css("background-color","#FFB5B5");
+
+                cl1 = "#FFB5B5";
+                cl2 = "#FF5151";
+                elm = document.getElementById("news_report");
+                T  = fadeText(cl1,cl2,elm);
+            }
+        });
+        $('input').on('ifUnchecked', function(event){
+            check_count--
+            if(check_count<2 && repeat_a==0){
+                repeat_b=0;
+                repeat_a=1;
+                var cl1 = "#97CBFF";
+                var cl2 = "#0080FF";
+                var cl1 = "#0080FF";
+                var cl2 = "#97CBFF";
+                var elm = document.getElementById("create_event");
+                T  = fadeText(cl1,cl2,elm);
+                //$('#create_event').css("background-color","#97CBFF");
+                //$('#news_report').css("background-color","#FFB5B5");
+
+                cl1 = "#FF5151";
+                cl2 = "#FFB5B5";
+                elm = document.getElementById("news_report");
+                T  = fadeText(cl1,cl2,elm);
+            }
+        });
+        */
+
+        
+        $(".wskCheckbox").click(function() {
+            if(this.checked) {
+               check_count++;
+                if(check_count>1 && repeat_b==0){
+                    repeat_b=1;
+                    repeat_a=0;
+                    var cl1 = "#97CBFF";
+                    var cl2 = "#0080FF";
+                    var elm = document.getElementById("create_event");
+                    T  = fadeText(cl1,cl2,elm);
+                    //$('#create_event').css("background-color","#97CBFF");
+                    //$('#news_report').css("background-color","#FFB5B5");
+
+                    cl1 = "#FFB5B5";
+                    cl2 = "#FF5151";
+                    elm = document.getElementById("news_report");
+                    T  = fadeText(cl1,cl2,elm);
+                }
+            }else{
+                check_count--
+            if(check_count<2 && repeat_a==0){
+                repeat_b=0;
+                repeat_a=1;
+                var cl1 = "#97CBFF";
+                var cl2 = "#0080FF";
+                var cl1 = "#0080FF";
+                var cl2 = "#97CBFF";
+                var elm = document.getElementById("create_event");
+                T  = fadeText(cl1,cl2,elm);
+                //$('#create_event').css("background-color","#97CBFF");
+                //$('#news_report').css("background-color","#FFB5B5");
+
+                cl1 = "#FF5151";
+                cl2 = "#FFB5B5";
+                elm = document.getElementById("news_report");
+                T  = fadeText(cl1,cl2,elm);
+            }
+            }
+        });
+
+
+        function Blend(a, b, alpha) {
+            var aa = [
+                    parseInt('0x' + a.substring(1, 3)), 
+                    parseInt('0x' + a.substring(3, 5)), 
+                    parseInt('0x' + a.substring(5, 7))
+                ];
+
+            var bb = [
+                    parseInt('0x' + b.substring(1, 3)), 
+                    parseInt('0x' + b.substring(3, 5)), 
+                    parseInt('0x' + b.substring(5, 7))
+                ];
+
+            r = '0' + Math.round(aa[0] + (bb[0] - aa[0])*alpha).toString(16);
+            g = '0' + Math.round(aa[1] + (bb[1] - aa[1])*alpha).toString(16);
+            b = '0' + Math.round(aa[2] + (bb[2] - aa[2])*alpha).toString(16);
+
+            return '#'
+                    + r.substring(r.length - 2)
+                    + g.substring(g.length - 2)
+                    + b.substring(b.length - 2);
+            }
+
+            function fadeText(cl1, cl2, elm){
+            var t = [];
+            var steps = 20;
+            var delay = 500;
+
+            for (var i = 0; i < steps; i++) {
+                (function(j) {
+                    t[j] = setTimeout(function() {
+                    var a  = j/steps;
+                    var color = Blend(cl1,cl2,a);
+                    elm.style.backgroundColor = color;
+                    }, j*delay/steps);
+                })(i);
+            }
+
+            return t;
+            }
+
+            
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.footable').footable({
+                /*options: {
+                    delay: 100, // The number of millseconds to wait before triggering the react event
+                    breakpoints: { // The different screen resolution breakpoints
+                        j6ul42l4ji3: 800,
+                        phone: 600,
+                        tablet: 1400
+                    }
+                },*/
+                breakpoints: {
+                    test: 300,
+                        phone: 600,
+                        tablet: 1000
+                }
+                 
+            });
+            $('.footable2').footable();
+
+            //notifyMe();
+        });
+        function change_date() {
+            $("#iwantochange").html("<input id='now_date' style='margin-right:10px' type='date'><button type='button' class='btn btn-sm btn-success' onclick='change_text()'>儲存</button>");
+        }
+
+
+
+        function change_text() {
+            $("#iwantochange").html($("#now_date").val());
+        }
+
+
+        $('#data_5 .input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+        $('#data_6 .input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+
+        /*
+ * Material Deesign Checkboxes non Polymer.
+ * Tested and working in: IE9+, Chrome (Mobile + Desktop), Safari,
+ * Opera, Firefox.
+ * @author Jason Mayes 2014, www.jasonmayes.com
+*/
+
+var wskCheckbox = function() {
+  var wskCheckboxes = [];
+  var SPACE_KEY = 32;
+
+  function animateCircle(checkboxElement) {
+    var circle =
+        checkboxElement.parentNode.getElementsByClassName('wskCircle')[0];
+    var restore = '';
+    if (circle.className.indexOf('flipColor') < 0) {
+      restore = circle.className + ' flipColor';
+    } else {
+      restore = 'wskCircle';
+    }
+    circle.className = restore  + ' show';
+    setTimeout(function(){
+      circle.className = restore;
+    }, 150);
+  }
+
+  function addEventHandler(elem, eventType, handler) {
+    if (elem.addEventListener) {
+      elem.addEventListener (eventType, handler, false);
+    }
+    else if (elem.attachEvent) {
+      elem.attachEvent ('on' + eventType, handler);
+    }
+  }
+
+  function clickHandler(e) {
+    e.stopPropagation();
+    if (this.className.indexOf('checked') < 0) {
+      this.className += ' checked';
+    } else {
+      this.className = 'wskCheckbox';
+    }
+    animateCircle(this);
+  }
+
+  function keyHandler(e) {
+    e.stopPropagation();
+    if (e.keyCode === SPACE_KEY) {
+      clickHandler.call(this, e);
+      // Also update the checkbox state.
+      var cbox = document.getElementById(this.parentNode.getAttribute('for'));
+      cbox.checked = !cbox.checked;
+    }
+  }
+
+  function clickHandlerLabel(e) {
+    var id = this.getAttribute('for');
+    var i = wskCheckboxes.length;
+    while (i--) {
+      if (wskCheckboxes[i].id === id) {
+        if (wskCheckboxes[i].checkbox.className.indexOf('checked') < 0) {
+          wskCheckboxes[i].checkbox.className += ' checked';
+        } else {
+          wskCheckboxes[i].checkbox.className = 'wskCheckbox';
+        }
+        animateCircle(wskCheckboxes[i].checkbox);
+        break;
+      }
+    }
+  }
+
+  function findCheckBoxes() {
+    var labels =  document.getElementsByTagName('label');
+    var i = labels.length;
+    while (i--) {
+      var posCheckbox = document.getElementById(labels[i].getAttribute('for'));
+      if (posCheckbox !== null && posCheckbox.type === 'checkbox' &&
+          (posCheckbox.className.indexOf('wskCheckbox') >= 0)) {
+        var text = labels[i].innerText;
+        var span = document.createElement('span');
+        span.className = 'wskCheckbox';
+        span.tabIndex = i;
+        var span2 = document.createElement('span');
+        span2.className = 'wskCircle flipColor';
+        labels[i].insertBefore(span2, labels[i].firstChild);
+        labels[i].insertBefore(span, labels[i].firstChild);
+        addEventHandler(span, 'click', clickHandler);
+        addEventHandler(span, 'keyup', keyHandler);
+        addEventHandler(labels[i], 'click', clickHandlerLabel);
+        var cbox = document.getElementById(labels[i].getAttribute('for'));
+        if (cbox.getAttribute('checked') !== null) {
+          span.click();
+        }
+        
+        wskCheckboxes.push({'checkbox': span,
+            'id': labels[i].getAttribute('for')});
+      }
+    }
+  }
+
+  return {
+    init: findCheckBoxes
+  };
+}();
+
+wskCheckbox.init();
+
+
+
+
+/*
+        function notifyMe() {
+            // 首先讓我們確定瀏覽器支援 Notification
+            if (!("Notification" in window)) {
+                alert("這個瀏覽器不支援 Notification");
+            }
+
+            // 再檢查使用者是否已經授權執行 Notification
+            else if (Notification.permission === "granted") {
+                // 如果已經授權就可以直接新增 Notification 了!
+                var notification = new Notification("個案編號ETR1055548有3筆接觸者轉介到新北市衛生局!");
+            }
+
+            // 否則，我們會需要詢問使用者是否開放權限
+            else if (Notification.permission !== 'denied') {
+                Notification.requestPermission(function (permission) {
+                // 如果使用者同意了就來新增一個 Notification 打聲招呼吧
+                if (permission === "granted") {
+                    var notification = new Notification("個案編號ETR1055548有3筆接觸者轉介到新北市衛生局");
+                }
+                });
+            }
+
+            // 如果使用者還是不同意授權執行 Notification
+            // 最好還是進行適當的處理以避免繼續打擾使用者
+            }Notification.requestPermission();function spawnNotification(theBody,theIcon,theTitle) {
+            var options = {
+                body: theBody,
+                icon: theIcon
+            }
+            var n = new Notification(theTitle,options);
+            }*/
+    </script>
+</body>
+
+
+
+</html>

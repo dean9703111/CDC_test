@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>疾管署人員</title>
+
+    <link href="../stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="../font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../stylesheets/animate.css" rel="stylesheet">
+    <link href="../stylesheets/style.css" rel="stylesheet">
+    <link href="../stylesheets/jquery.qtip.min.css" rel="stylesheet">
+    <link href="../stylesheets/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">林于瑄</strong>
+                                    </span> <span class="text-muted text-xs block">疾管署人員<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            疾管署人員
+                        </div>
+                    </li>
+                    <li>
+                        <a href="health_master_list.html"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master0_beta.html">個案事件</a></li>
+                            <li><a href="health_master_muticase1.html">群聚事件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master_chart1.html">接觸者追蹤情形</a></li>
+                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
+                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
+                            <li><a href="graph_chartjs.html">Chart.js</a></li>
+                            <li><a href="graph_chartist.html">Chartist</a></li>
+                            <li><a href="c3.html">c3 charts</a></li>
+                            <li><a href="graph_peity.html">Peity Charts</a></li>
+                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>  </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <div class="alert alert-success alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-info alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>接觸者名冊建立</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            事件管理
+                        </li>
+                        <li class="active">
+                            <a href="health_master0_beta.html">個案事件</a>
+                        </li>
+                        <li>
+                            <strong>接觸者名冊建立</strong>
+                        </li>
+                        <li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h2><a href="health_master2.html"> 個案資料</a></h2>
+                                    </td>
+                                    <td style="padding-left:20px">
+
+                                        <div class="input-group-btn">
+                                           <button data-toggle="dropdown" aria-expanded="false" type="button" class="btn dropdown-toggle btn-primary" style="border-radius: 4px;">
+                                                        <span class="fa fa-download"></span>下載名冊模板 </button>   
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="row">
+                                <div class="col-sm-12 b-r">
+                                    <table class="table table-striped ">
+                                        <thead>
+                                            <tr>
+                                                <th>通報單編號 </th>
+                                                <th>疾病名</th>
+                                                <th>居住地 </th>
+                                                <th>出疹日</th>
+                                                <th>追蹤截止日</th>
+                                                <th>接觸者人數</th>
+                                                <th>症狀人數</th>
+                                                <th>功能</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>XDS31234XD</td>
+                                                <td>麻疹</td>
+                                                <td>台北</td>
+                                                <td>2014/06/13</td>
+                                                <td>2015/06/13</td>
+                                                <td>13</td>
+                                                <td style="color:red">5</td>
+                                                <td>
+                                                    <button class="btn btn-success " type="button"><i class="fa fa-upload"></i>&nbsp;&nbsp;<span class="bold">上傳名冊</span></button>
+                                                    <button class="btn btn-info " type="button"><i class="fa fa-download"></i>&nbsp;&nbsp;<span class="bold">下載名冊</span></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div>
+                                        <div class="col-lg-6">
+                                            <mdall>
+                                                <h2 style="color:red">派送進度:38/60</h2>
+                                            </mdall>
+                                            <div class="progress progress-striped active m-b-sm">
+                                                <div style="width: 60%;" class="progress-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <mdall>
+                                                <h2 style="color:red">回報進度:28/80</h2>
+                                            </mdall>
+                                            <div class="progress progress-striped active m-b-sm">
+                                                <div style="width: 30%;" class="progress-bar progress-bar-success"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="tabs-container">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-1">派送</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-2">回報</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="tab-1" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <div class="ibox float-e-margins">
+                                            <div class="ibox-title">
+                                                <div class="ibox-tools">
+                                                    <div class="search-form">
+                                                        <div>
+                                                            <div class="input-group">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default" style="margin-right:8px">
+                                                            <a data-toggle="modal" href="#test-modal"><img src="img/menu_select.jpg" width="20" /></a>
+                                                    </button>
+                                                                    <button type="button" class="btn btn-default" style="margin-right:8px">
+                                                            <a href="#"><i class="fa fa-refresh"></i></a>
+                                                        </button>
+
+                                                                </div>
+                                                                <input type="text" placeholder="ID、出生日期、姓名" name="search" class="form-control ">
+
+                                                                <div class="input-group-btn">
+                                                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">未派送 <span class="caret"></span></button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="#">全部</a></li>
+                                                                        <li><a href="#">未派送</a></li>
+                                                                        <li><a href="#">已派送</a></li>
+                                                                    </ul>
+                                                                    <button class="btn btn-primary" type="submit" style="margin-left:8px">
+                                                        搜尋接觸者
+                                                    </button>
+                                                                    <button data-toggle="modal" href="#modal-form" class="btn btn-warning" style="margin-left:8px">
+                                                        新增接觸者
+                                                    </button>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div id="modal-form" class="modal fade" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content" style="margin:10vh auto;width:500px">
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <center>
+                                                                    <h2 style="font-weight:bold">接觸者基本資料</h2>
+                                                                </center>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">接觸地點</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="台北市"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">接觸日期</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="date" class="form-control"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">姓名</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="王聖男"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">年齡</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="65"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">連絡電話</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input class="form-control" name="password" value="0923200003"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">居住縣市</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input class="form-control" name="password" value="台北"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">居住鄉鎮市區</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input class="form-control" name="password" value="信義區"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">居住地址</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input class="form-control" name="password" value="台北信義區"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">出生日期</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="80/02/22"></div>
+                                                                <label style="padding-top:8px;margin-bottom:8px" class="col-md-3 control-label">性別</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="男"></div>
+                                                                <label style="margin-bottom:8px" class="col-md-3 control-label">麻疹疫苗接種日期</label>
+                                                                <div style="margin-bottom:8px" class="col-md-8"><input type="text" class="form-control" value="104/02/22"></div>
+                                                                <button class="col-md-12 btn btn-primary">
+                                                    確定新增
+                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="ibox-content">
+                                                <div class="table-responsive">
+                                                    <table id="example" class="footable table table-stripped toggle-arrow-tiny">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><input type="checkbox" class="i-checks" name="input[]">全選</th>
+                                                                <th>姓名</th>
+                                                                <th>電話</th>
+                                                                <th>接觸地點(關係)<a data-toggle="modal" href="#add_new_method"><i class="fa fa-plus-circle"></i></a></th>
+                                                                <th>居住地</th>
+                                                                <th>接觸時間</th>
+                                                                <th>追蹤截止日</th>
+                                                                <th>勾稽</th>
+                                                                <th></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                <td>林政昇<img src="img/back.png" title="此案件為群體回報" width="30" /></td>
+                                                                <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                <td><a style="width:90px" class="btn btn-danger btn-xs btn-rounded"
+                                                                        href="#">住家(父)</a></td>
+                                                                <td>台北中山區</td>
+                                                                <td>2012/08/25</td>
+                                                                <td>2012/09/25</td>
+                                                                <td><a href="#" title="稽核來源:戶役政、NIIS"><i class="fa fa-check"></i></a></td>
+                                                                <td>
+                                                                    <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                <td>凡鎮東</td>
+                                                                <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                        href="#">學校(同學)</a></td>
+                                                                <td>台北中山區</td>
+                                                                <td>2012/08/25</td>
+                                                                <td>2012/09/25</td>
+                                                                <td><a class="check_no_data" href="#" title="缺漏欄位:<br>1.居住縣市<br>2.居住鄉鎮市區"><i style="color:orange" class="fa fa-exclamation"></i></a></td>
+                                                                <td>
+                                                                    <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                <td>張振國</td>
+                                                                <td><a href="#test" data-style="qtip-blue" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                        href="#">學校(老師)</a></td>
+                                                                <td>台北中山區</td>
+                                                                <td>2012/08/25</td>
+                                                                <td>2012/09/25</td>
+                                                                <td><a href="#" title="稽核來源:NIIS"><i class="fa fa-check"></i></a></td>
+                                                                <td>
+                                                                    <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="col-lg-12">
+                                                        <center>
+                                                            <div class="radio radio-info radio-inline">
+                                                                <input type="radio" id="inlineRadio1" value="auto" name="radioInline" checked="">
+                                                                <label for="inlineRadio1"> 自動派送 </label>
+                                                            </div>
+                                                            <div class="radio radio-inline">
+                                                                <input type="radio" id="inlineRadio2" value="hand" name="radioInline">
+                                                                <label for="inlineRadio2"> 手動派送 </label>
+                                                            </div>
+                                                            <div id="choose_content">
+                                                                <h3 >系統將依據接觸者的<strong style="color:red">居住地</strong>進行分類派送</h3>
+                                                            </div>
+                                                            <button type="button" class="btn btn-outline btn-primary" style="width:50vw">派送</button>
+                                                        </center>
+                                                    </div>
+
+
+                                                    <div class="ibox collapsed">
+                                                        <div style="background-color:#DDDDDD" class="ibox-title">
+                                                            <h5>已派送名單</h5>
+                                                            <div class="ibox-tools">
+                                                                <a class="collapse-link">點擊展開
+                                       <i class="fa fa-chevron-up"></i>
+                                       </a>
+                                                            </div>
+                                                        </div>
+                                                        <div style="background-color:#F0F0F0" class="ibox-content">
+                                                            <table id="example" class="footable table table-stripped toggle-arrow-tiny">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th><input type="checkbox" class="i-checks" name="input[]">全選</th>
+                                                                        <th>姓名</th>
+                                                                        <th>電話</th>
+                                                                        <th>居住地</th>
+                                                                        <th>接觸地點</th>
+                                                                        <th>接觸時間</th>
+                                                                        <th>追蹤截止日</th>
+                                                                        <th>已回報次數</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                        <td>林政昇</td>
+                                                                        <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>2012/08/25</td>
+                                                                        <td>2012/09/25</td>
+                                                                        <td><a href="#test" title="6/2 無症狀<br> 6/5 發燒<br>6/8無症狀 <br><br>最後結案日:6/20">10</a></td>
+                                                                        <td>
+                                                                            <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                        <td>凡鎮東</td>
+                                                                        <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>2012/08/25</td>
+                                                                        <td>2012/09/25</td>
+                                                                        <td><a href="#test" title="6/2 無症狀<br> 6/5 發燒<br>6/8無症狀 <br><br>最後結案日:6/20">10</a></td>
+                                                                        <td>
+                                                                            <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]"></td>
+                                                                        <td>張振國</td>
+                                                                        <td><a href="#test" data-style="qtip-blue" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>台北中山區</td>
+                                                                        <td>2012/08/25</td>
+                                                                        <td>2012/09/25</td>
+                                                                        <td><a href="#test" title="6/2 無症狀<br> 6/5 發燒<br>6/8無症狀 <br><br>最後結案日:6/20">10</a></td>
+                                                                        <td>
+                                                                            <button type="button" class="btn  btn-xs btn-info" onclick="location.href='health_master3.html'">檢視/修改</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab-2" class="tab-pane">
+                                    <div class="panel-body">
+                                        <div class="col-lg-12">
+                                            <div class="ibox-title">
+                                                <div>
+                                                    <div class="input-group">
+                                                        <div class="col-lg-12" style="margin-bottom:10px">
+                                                            <div class="col-lg-7" style="margin-bottom:10px">
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px"><i style="margin-right:10px" class="fa fa-minus"></i><i class="fa fa-sort-down"></i></button>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px">無症狀</button>
+                                                                <button data-toggle="modal" href="#modal1" type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px">有症狀</button>
+
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px">失聯</button>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px">待追蹤</button>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:80px;margin-right:10px">轉陽個案</button>
+                                                            </div>
+                                                            <div class="col-lg-5">
+                                                                <label style="margin-right:20px">第1到第10筆，共2頁</label>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:35px;margin-right:1px"><i class="fa fa-angle-left"></i></button>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:35px;margin-right:20px"><i class="fa fa-angle-right"></i></button>
+                                                                <button type="button" class="btn btn-default" style="background-color:#F0F0F0;width:50px"><i class="fa fa-cog"></i></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="input-group">
+                                                                <div class="input-group-btn">
+                                                                    <button class="btn btn-default" style="margin-right:8px">
+                                                            <a data-toggle="modal" href="#test-modal"><img src="img/menu_select.jpg" width="20" /></a>
+                                                    </button>
+                                                                    <button type="button" class="btn btn-default" style="margin-right:8px">
+                                                            <a href="#"><i class="fa fa-refresh"></i></a>
+                                                        </button>
+
+                                                                </div>
+                                                                <input type="text" placeholder="ID、出生日期、姓名" name="search" class="form-control ">
+
+                                                                <div class="input-group-btn">
+                                                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">未回報 <span class="caret"></span></button>
+                                                                    <ul class="dropdown-menu">
+                                                                        <li><a href="#">全部</a></li>
+                                                                        <li><a href="#">已回報</a></li>
+                                                                        <li><a href="#">未回報</a></li>
+                                                                    </ul>
+                                                                    <button class="btn btn-primary" type="submit" style="margin-left:8px">
+                                                        搜尋接觸者
+                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="ibox-content">
+                                                <div class="table-responsive" style="overflow-x:hidden">
+                                                    <table id="example" class="footable table table-stripped toggle-arrow-tiny">
+                                                        <thead>
+                                                            <tr>
+                                                                <th data-sort-ignore="true">
+                                                                    <th data-toggle="true">姓名</th>
+                                                                    <th>接觸地點(關係)<a data-toggle="modal" href="#add_new_method"><i class="fa fa-plus-circle"></i></a></th>
+                                                                    <th>性別</th>
+                                                                    <th>電話</th>
+                                                                    <th>追蹤進度</th>
+                                                                    <th data-sort-ignore="true"></th>
+                                                                    <th data-sort-ignore="true"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr style="border-style:solid;border-color:red">
+                                                                <td><input type="checkbox" class="i-checks" name="input[]">
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-default">林政昇
+                                                <a data-toggle="modal" href="#modal-form1"><img src="img/write_icon.png" width="20" /></a>                                                            
+                                                
+                                                </button><img src="img/change.png" title="由台南市衛生局轉介" width="30" />
+                                                                </td>
+
+                                                                <td><a style="width:90px" class="btn btn-danger btn-xs btn-rounded"
+                                                                        href="#">住家(父)</a></td>
+                                                                <td>男</td>
+                                                                <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                <td>
+                                                                    <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                    3次
+                                                </a></h3>
+                                                                </td>
+                                                                <td><a class="red_check" style="color: red" href="#test" title="1.此人有症狀">備註</a></td>
+                                                                <td>                                                                    
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox" class="i-checks" name="input[]">
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-default">凡鎮東
+                                                            <img src="img/write_icon.png" width="20" />
+                                                </button>
+                                                                </td>
+                                                                <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                        href="#">學校(同學)</a></td>
+                                                                <td>男</td>
+                                                                <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                <td>
+                                                                    <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                    4次
+                                                </a></h3>
+                                                                </td>
+                                                                <td><a class="red_check" style="color: red" href="#test" title="1.此人有症狀<br>2.感冒發燒">備註(2)</a></td>
+                                                                <td>                                                                    
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox" class="i-checks" name="input[]">
+
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-default">張振國
+                                                            <img src="img/write_icon.png" width="20" />
+                                                </button></td>
+                                                                <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                        href="#">學校(老師)</a></td>
+                                                                <td>男</td>
+                                                                <td><a href="#test" data-style="qtip-blue" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                <td>
+                                                                    <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                    1次
+                                                </a></h3>
+                                                                </td>
+                                                                <td></td>
+                                                                <td>                                                                    
+                                                                    <button type="button" class="btn  btn-xs btn-danger">刪除</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <div class="ibox collapsed">
+                                                        <div style="background-color:#DDDDDD" class="ibox-title">
+                                                            <h5>已回報名單</h5>
+                                                            <div class="ibox-tools">
+                                                                <a class="collapse-link">點擊展開
+                                       <i class="fa fa-chevron-up"></i>
+                                       </a>
+                                                            </div>
+                                                        </div>
+                                                        <div style="background-color:#F0F0F0" class="ibox-content">
+                                                            <table id="example" class="footable table table-stripped toggle-arrow-tiny">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th data-sort-ignore="true">
+                                                                            <th data-toggle="true">姓名</th>
+                                                                            <th>接觸地點(關係)</th>
+                                                                            <th>性別</th>
+                                                                            <th>電話</th>
+                                                                            <th>追蹤進度</th>
+                                                                            <th data-sort-ignore="true"></th>
+                                                                            <th data-sort-ignore="true">回報方式</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]">
+                                                                        <img src="img/alarm.gif" width="30" />
+                                                                        </td>
+                                                                        <td>
+                                                                            <button class="btn btn-default">林政昇
+                                                        <a data-toggle="modal" href="#modal-form1"><img src="img/write_icon.png" width="20" /></a>                                                            
+
+                                                        </button>
+                                                                        </td>
+
+                                                                        <td><a style="width:90px" class="btn btn-danger btn-xs btn-rounded"
+                                                                                href="#">住家(父)</a></td>
+                                                                        <td>男</td>
+                                                                        <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                        <td>
+                                                                            <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                            3次
+                                                        </a></h3>
+                                                                        </td>
+                                                                        <td><a class="red_check" style="color: red" href="#test"
+                                                                                title="1.此人有症狀">備註</a></td>
+                                                                        <td>衛生所電訪</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]">
+                                                                        </td>
+                                                                        <td>
+                                                                            <button class="btn btn-default">凡鎮東
+                                                                    <img src="img/write_icon.png" width="20" />
+                                                        </button>
+                                                                        </td>
+                                                                        <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                                href="#">學校(同學)</a></td>
+                                                                        <td>男</td>
+                                                                        <td><a href="#test" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                        <td>
+                                                                            <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                            4次
+                                                        </a></h3>
+                                                                        </td>
+                                                                        <td><a class="red_check" style="color: red" href="#test"
+                                                                                title="1.此人有症狀<br>2.感冒發燒">備註(2)</a></td>
+                                                                        <td>衛生所家訪</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td><input type="checkbox" class="i-checks" name="input[]">
+
+                                                                        </td>
+                                                                        <td>
+                                                                            <button class="btn btn-default">張振國
+                                                                    <img src="img/write_icon.png" width="20" />
+                                                        </button></td>
+                                                                        <td><a style="width:90px" class="btn btn-primary btn-xs btn-rounded"
+                                                                                href="#">學校(老師)</a></td>
+                                                                        <td>男</td>
+                                                                        <td><a href="#test" data-style="qtip-blue" title="電話1:0933333333<br> 電話2:0933333333<br>電話3:0933333333">0933333333</a></td>
+
+                                                                        <td>
+                                                                            <h3><a href="#test" title="6/2 無症狀(自主回報)<br> 6/5 發燒(所內電訪)<br>6/8無症狀(自主回報) <br><br>最後結案日:6/20">
+                                                            1次
+                                                        </a></h3>
+                                                                        </td>
+                                                                        <td></td>
+                                                                        <td>自主回報
+                                                                            <img src="img/people_back.png" width="30" />
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+            </div>
+
+        </div>
+    </div>
+    <div id="test-modal" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:400px">
+                <div class="modal-body">
+                    <div class="row">
+                        <table>
+                            <tr>
+                                <td style="padding-left:20px">
+                                    <h2 style="font-weight:bold">篩選條件(接觸地點)</h2>
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="padding-top:30px;padding-left:20px" class="more">
+
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">住家</a>
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">辦公室</a>
+                                <a style="width:80px" class="btn btn-danger  btn-rounded" href="#">學校</a>
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">公車</a>
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">捷運</a>
+                                <a style="width:80px" class="btn btn-primary  btn-rounded" href="#">高鐵</a>
+                            </div>
+                            <div style="margin-bottom:20px">
+                                <a style="width:80px" class="btn btn-warning  btn-rounded" href="#">其他</a>
+                            </div>
+                            <button type="button" class="btn btn-w-m btn-success">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal1" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+
+                    <center>
+                        <h2 style="font-weight:bold">症狀</h2>
+                    </center>
+
+                    <div class="tabs-container">
+
+                        <div class="tabs-left">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-toggle="tab" href="#tab-6">林政昇</a></li>
+                                <li class=""><a data-toggle="tab" href="#tab-7">凡鎮東</a></li>
+                            </ul>
+                            <div class="tab-content ">
+                                <div id="tab-6" class="tab-pane active">
+                                    <div class="panel-body">
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    是否發燒
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無出疹子
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無結膜炎
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無咳嗽
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無流鼻水
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                        是否接種過疫苗
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="color:red;width:105px">
+                                                                                                                    備註:
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <input id="surname" name="surname" type="text" class="form-control">
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </div>
+                                </div>
+                                <div id="tab-7" class="tab-pane">
+                                    <div class="panel-body">
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    是否發燒
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無出疹子
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無結膜炎
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無咳嗽
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                                                                                    有無流鼻水
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table class="col-lg-6" style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="width:105px">
+                                                        是否接種過疫苗
+                                                    </label>
+                                                </td>
+                                                <td>
+                                                    <div data-toggle="buttons" class="btn-group">
+                                                        <label class="btn btn-md btn-white"> <input type="radio" id="option1" name="options"> 有 </label>
+                                                        <label class="btn btn-md btn-white active"> <input type="radio" id="option2" name="options"> 無 </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <table style="margin-bottom: 15px">
+                                            <tr>
+                                                <td>
+                                                    <label style="color:red;width:105px">
+                                                                                                                    備註:
+                                                                                                                </label>
+                                                </td>
+                                                <td>
+                                                    <input id="surname" name="surname" type="text" class="form-control">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+                    <p>
+                        <button type="button" class="btn btn-block btn-outline btn-primary">一鍵回報</button>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-form1" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:10vh auto;width:500px;height:650px;overflow-y:auto">
+                <div class="modal-body">
+                    <div class="row">
+                        <center>
+                            <h2 style="font-weight:bold">編輯基本資料</h2>
+                        </center>
+                        <label style="padding-top:8px" class="col-md-4 control-label">接觸地點</label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">台北(戶役政)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">接觸日期</label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">2017/06/05(NIIS)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">姓名</label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">張國洲(NIIS)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">年齡</label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">28(戶役政)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">連絡電話</label>
+                        <div class="col-md-7"><input class="form-control" name="password" value="0923200003"></div>
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">0923200003(戶役政)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">居住縣市</label>
+                        <div class="col-md-7"><input class="form-control" name="password" value="台北"></div>
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">台北(戶役政)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">居住鄉鎮市區</label>
+                        <div class="col-md-7"><input class="form-control" name="password" value="信義區"></div>
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">信義區(戶役政)</p>
+                        </div>
+                        <label style="padding-top:8px" class="col-md-4 control-label">居住地址</label>
+                        <div class="col-md-7"><input class="form-control" name="password" value="台北信義區"></div>
+                        <label class="col-md-4 control-label"></label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">台北信義區(戶役政)</p>
+                        </div>
+
+                        <label style="padding-top:8px" class="col-md-4 control-label">出生日期</label>
+
+                        <div class="col-md-7"><input type="text" class="form-control" value="80/02/22"></div>
+
+                        <label style="padding-top:8px" class="col-md-4 control-label">性別</label>
+                        <div class="col-md-7">
+                            <p class="form-control-static">男(戶役政)</p>
+                        </div>
+                        <label class="col-md-4 control-label">麻疹疫苗接種日期</label>
+                        <div class="col-md-7">
+                            <input type="date">
+                        </div>
+                        <button data-toggle="modal" href="#modal_change_loacation" style="margin-top:10px" class="col-md-6 btn btn-primary">
+                            儲存
+                        </button>
+                        <button data-toggle="modal" href="#modal_backreason" style="margin-top:10px" class="col-md-6 btn btn-danger">
+                            退回
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal_change_loacation" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:300px;height:250px;overflow-y:auto;border-color: red;
+    border-width: thick;border-radius: 30px">
+                <div class="modal-body">
+                    <div class="row">
+                        <center>
+                            <h2 style="font-weight:bold">是否將該筆接觸者將轉介到信義區衛生所?</h2>
+                        </center>
+                        <button style="margin-top:10px" class="col-md-12 btn btn-warning">
+                            是
+                        </button>
+                        <button style="margin-top:10px" class="col-md-12 btn btn-info">
+                            否
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal_backreason" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:300px;height:250px;overflow-y:auto;border-color: red;
+    border-width: thick;border-radius: 30px">
+                <div class="modal-body">
+                    <div class="row">
+                        <center>
+                            <h2 style="font-weight:bold">退回改筆接觸者的理由是?</h2>
+                            <input type="text" class="form-control">
+                        </center>
+                        <button style="margin-top:10px" class="col-md-12 btn btn-primary">
+                            發送
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="add_new_method" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="margin:25vh auto;width:400px">
+                <div class="modal-body">
+                    <div class="row">
+                        <table>
+                            <tr>
+                                <td style="padding-left:20px">
+                                    <h2 style="font-weight:bold">增加篩選條件:接觸地點(關係)</h2>
+                                     <input class="form-control" type="text" name="fname" placeholder="家人">
+                                </td>
+                            </tr>
+                        </table>
+                        <div style="padding-top:30px;padding-left:20px" class="more">
+                              
+                            
+                            <button type="button" class="btn btn-w-m btn-success">確定</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="js/jquery.qtip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+            $('a[href][title]').qtip({
+                content: {
+                    text: false // Use each elements title attribute
+                },
+                style: 'qtip-blue' // Give it some style
+            });
+            $('.red_check').qtip({
+                content: {
+                    text: false // Use each elements title attribute
+                },
+                style: 'qtip-red' // Give it some style
+            });
+            $('img[title]').qtip({
+                content: {
+                    text: false // Use each elements title attribute
+                },
+                style: 'qtip-red' // Give it some style
+            });
+            $('.check_no_data').qtip({
+                content: {
+                    text: false // Use each elements title attribute
+                }
+            });
+            $('input:radio[name=radioInline]').change(function () {
+                if (this.value == 'auto') {
+                    $("#choose_content").html('<h3 >系統將依據接觸者的<strong style="color:red">居住地</strong>進行分類派送</h3>');
+                }
+                else if (this.value == 'hand') {
+                    $("#choose_content").html('<label><h3>區管：</h3></label>' +
+                        '<select class="input-sm form-control input-s-sm inline" style="width:100px;margin-right:20px"><option value="4">選擇區管</option>' +
+                        '</select><label><h3>衛生局：</h3></label><select class="input-sm form-control input-s-sm inline" style="width:130px;margin-right:20px">' +
+                        '<option value="0">選擇衛生局</option></select>');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+
+
+</html>

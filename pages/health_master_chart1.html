@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>疾管署人員</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/plugins/c3/c3.min.css" rel="stylesheet">
+    <link href="css/plugins/footable/footable.core.css" rel="stylesheet">
+    <link href="css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+    <link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+    <link href="css/plugins/clockpicker/clockpicker.css" rel="stylesheet">
+    <link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+    <link href="css/jquery.qtip.min.css" rel="stylesheet">
+    <link href="css/w3.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">林于瑄</strong>
+                                    </span> <span class="text-muted text-xs block">疾管署人員<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            疾管署人員
+                        </div>
+                    </li>
+                    <li>
+                        <a href="health_master_list.html"><i class="fa fa-th-large"></i> <span class="nav-label">待辦清單</span><span class="label label-info pull-right">5</span></a>
+                    </li>
+                    <li>
+                        <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">事件管理</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master0_beta.html">個案事件</a></li>
+                            <li><a href="health_master_muticase1.html">群聚事件</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">分析圖表</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="health_master_chart1.html">接觸者追蹤情形</a></li>
+                            <li><a href="graph_morris.html">Morris.js Charts</a></li>
+                            <li><a href="graph_rickshaw.html">Rickshaw Charts</a></li>
+                            <li><a href="graph_chartjs.html">Chart.js</a></li>
+                            <li><a href="graph_chartist.html">Chartist</a></li>
+                            <li><a href="c3.html">c3 charts</a></li>
+                            <li><a href="graph_peity.html">Peity Charts</a></li>
+                            <li><a href="graph_sparkline.html">Sparkline Charts</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Email view</a></li>
+                            <li><a href="mail_compose.html">Compose email</a></li>
+                            <li><a href="email_template.html">Email templates</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html"><i class="fa fa-pie-chart"></i> <span class="nav-label">Metrics</span>  </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="fa fa-flask"></i> <span class="nav-label">Widgets</span></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-warning">3</span>
+                    </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <div class="alert alert-success alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-info alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                                <div class="alert alert-warning alert-dismissable">
+                                    <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                                    <center><a class="alert-link" href="health_loacal_case2.html">個案編號ETR1055548</a><br>有3筆由大安區衛生所轉介接觸者.</center>
+                                </div>
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-8">
+                    <h2>接觸者追蹤情形</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            分析圖表
+                        </li>
+                        <li class="active">
+                            <strong>接觸者追蹤情形</strong>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-content">
+                                    <div class="ibox-tools">
+                                        <div class="search-form">
+                                            <div id="data_5" class="col-lg-4" style="margin-bottom:10px">
+                                                <div class="input-daterange input-group" id="datepicker">
+                                                    <input type="text" class="form-control" name="start" value="05/14/2014" />
+                                                    <span class="input-group-addon">to</span>
+                                                    <input type="text" class="form-control" name="end" value="05/22/2014" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="input-group" class="col-lg-6">
+
+                                                <input type="text" placeholder="通報單號、出生日期、姓名" name="search" class="form-control ">
+
+                                                <div class="input-group-btn">
+                                                    <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" aria-expanded="false">全部<span class="caret"></span></button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#">全部</a></li>
+                                                        <li><a href="#">麻疹</a></li>
+                                                        <li><a href="#">A型流感</a></li>
+                                                    </ul>
+                                                    <button class="btn btn-primary" onclick="location.href='health_loacal_case2.html'">
+                                                        搜尋事件
+                                                        </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <div style="padding:2vh 2vw">
+                                    <table id="example" class="footable table table-stripped toggle-arrow-tiny">
+                                        <thead>
+                                            <tr>
+                                                <th data-toggle="true">通報單號</th>
+                                                <th>疾病別</th>
+                                                <th>接觸者人數</th>
+                                                <th>已追蹤人數</th>
+                                                <th>待追蹤人數</th>
+                                                <th>追蹤截止日</th>
+                                                <th data-hide="all"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>DSGF123542</td>
+                                                <td>麻疹</td>
+                                                <td><a href="#test" title="同住者家人:8人<br> 職場接觸者:90人<br>就醫接觸者:50人<br>小於1歲接觸者:0人<br>1-6歲接觸者:4人">148</a></td>
+                                                <td>147</td>
+                                                <td>31</td>
+                                                <td>2012/08/25</td>
+                                                <td>
+                                                    <div>
+                                                        <select style="width:0px;display:none">
+                                                                </select>
+                                                        <table class="table table-striped" style="width:60vw">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>接觸日期</th>
+                                                                    <th>接觸地點</th>
+                                                                    <th>健康追蹤截止日</th>
+                                                                    <th>接觸人數</th>
+                                                                    <th>已追蹤人數</th>
+                                                                    <th>待追蹤人數</th>
+                                                                    <th>備註</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2014/04/08</td>
+                                                                    <td>親友、計程車司機</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>5</td>
+                                                                    <td>0</td>
+                                                                    <td>5</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2014/04/09</td>
+                                                                    <td>VN110前後兩排旅客</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>25</td>
+                                                                    <td>
+                                                                        <div class="w3-dropdown-hover" style="background-color:transparent;">
+                                                                            <a style="color:#0066ff">20</a>
+                                                                            <div class="w3-dropdown-content w3-bar-block w3-border">
+                                                                                <div style="text-align:center;margin-top:15px">
+                                                                                    <center>
+                                                                                        <table>
+                                                                                            <tr>
+                                                                                                <td><label>顯示方式：</label></td>
+                                                                                                <td> <select id="choose_cal" class="form-control"
+                                                                                                        style="width:100px">
+                                                                                                <option value="1">依種類</option>
+                                                                                                <option value="2">依縣市</option>
+                                                                                            </select></td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </center>
+                                                                                </div>
+                                                                                <div class="pie">
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>5</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2014/04/12</td>
+                                                                    <td>兒科門診</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>40</td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a style="color:#0066ff" class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                    28
+                                                                                </a>
+                                                                            <ul class="dropdown-menu dropdown-alerts">
+                                                                                <div>
+                                                                                    <div class="pie"></div>
+                                                                                </div>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>12</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2014/04/13</td>
+                                                                    <td>急診</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>78</td>
+                                                                    <td>
+                                                                        <div class="dropdown">
+                                                                            <a style="color:#0066ff" class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                                                                    70
+                                                                                </a>
+                                                                            <ul class="dropdown-menu dropdown-alerts">
+                                                                                <div>
+                                                                                    <div class="pie"></div>
+                                                                                </div>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>9</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                                <tr style="color:red">
+                                                                    <td></td>
+                                                                    <td>總計</td>
+                                                                    <td></td>
+                                                                    <td>148</td>
+                                                                    <td>117</td>
+                                                                    <td>31</td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>DHGt135153</td>
+                                                <td>A型流感(一般)</td>
+                                                <td><a href="#test" title="同住者家人:8人<br> 職場接觸者:90人<br>就醫接觸者:50人<br>小於1歲接觸者:0人<br>1-6歲接觸者:4人">20</a></td>
+                                                <td>14</td>
+                                                <td>6</td>
+                                                <td>2012/08/25</td>
+                                                <td>
+                                                    <div>
+                                                        <select style="width:0px;display:none">
+                                                                </select>
+                                                        <table class="table table-striped" style="width:60vw">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>權責單位/分區</th>
+                                                                    <th>接觸者身分別</th>
+                                                                    <th>接觸日期</th>
+                                                                    <th>追蹤截止日期</th>
+                                                                    <th>追蹤人數</th>
+                                                                    <th>健康情形(無症狀人數/有症狀人數)</th>
+                                                                    <th>尚待追蹤</th>
+                                                                    <th>採檢人數</th>
+                                                                    <th>預防性投藥人數</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>台北市衛生局</td>
+                                                                    <td>球友</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>2014/05/28</td>
+                                                                    <td>25</td>
+                                                                    <td>8/15</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>台北市衛生局</td>
+                                                                    <td>同學</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>2014/05/28</td>
+                                                                    <td>25</td>
+                                                                    <td>8/15</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>台北市衛生局</td>
+                                                                    <td>同事</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>2014/05/28</td>
+                                                                    <td>25</td>
+                                                                    <td>8/15</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>台北市衛生局</td>
+                                                                    <td>高鐵旅客</td>
+                                                                    <td>2014/04/28</td>
+                                                                    <td>2014/05/28</td>
+                                                                    <td>25</td>
+                                                                    <td>8/15</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                    <td>6</td>
+                                                                </tr>
+                                                                <tr style="color:red">
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td></td>
+                                                                    <td>總計</td>
+                                                                    <td>217</td>
+                                                                    <td>117/10</td>
+                                                                    <td>31</td>
+                                                                    <td>31</td>
+                                                                    <td>31</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>JKHJK11254</td>
+                                                <td>A型流感(密切)</td>
+                                                <td><a href="#test" title="同住者家人:8人<br> 職場接觸者:90人<br>就醫接觸者:50人<br>小於1歲接觸者:0人<br>1-6歲接觸者:4人">55</a></td>
+                                                <td>50</td>
+                                                <td>5</td>
+                                                <td>2012/08/25</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button type="button" class="btn btn-w-m btn-primary" onclick="location.href='twoadd.html'">匯出追蹤表單</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- FooTable -->
+    <script src="js/plugins/footable/footable.all.min.js"></script>
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- iCheck -->
+    <script src="js/plugins/iCheck/icheck.min.js"></script>
+
+    <!-- d3 and c3 charts -->
+    <script src="js/plugins/d3/d3.min.js"></script>
+    <script src="js/plugins/c3/c3.min.js"></script>
+    <!-- Data picker -->
+    <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+    <!-- Clock picker -->
+    <script src="js/plugins/clockpicker/clockpicker.js"></script>
+    <!-- Date range picker -->
+    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="js/jquery.qtip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+                radioClass: 'iradio_square-green',
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            c3.generate({
+                bindto: '.pie',
+                size: {
+                    width: 300,
+                    height: 300
+                },
+                data: {
+                    columns: [
+                        ['≦1歲', 4],
+                        ['1-6歲(未接種MMR)', 2],
+                        ['1-6歲(已接種MMR)', 5],
+                        ['孕婦', 7],
+                        ['其他接觸者', 2],
+                        ['失聯', 2],
+                        ['出現疑似症狀', 4]
+                    ],
+                    type: 'pie'
+                },
+                pie: {
+                    label: {
+                        format: function (value, ratio, id) {
+                            return value;
+                        }
+                    }
+                }
+            });
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+
+        $('#choose_cal').on('change', function (e) {
+            var optionSelected = $("option:selected", this);
+            var valueSelected = this.value;
+            if(valueSelected==1){
+                c3.generate({
+                bindto: '.pie',
+                size: {
+                    width: 300,
+                    height: 300
+                },
+                data: {
+                    columns: [
+                        ['≦1歲', 4],
+                        ['1-6歲(未接種MMR)', 2],
+                        ['1-6歲(已接種MMR)', 5],
+                        ['孕婦', 7],
+                        ['其他接觸者', 2],
+                        ['失聯', 2],
+                        ['出現疑似症狀', 4]
+                    ],
+                    type: 'pie'
+                },
+                pie: {
+                    label: {
+                        format: function (value, ratio, id) {
+                            return value;
+                        }
+                    }
+                }
+            });
+            }else{
+                c3.generate({
+                bindto: '.pie',
+                size: {
+                    width: 300,
+                    height: 300
+                },
+                data: {
+                    columns: [
+                        ['台北市', 3],
+                        ['基隆市', 5],
+                        ['台中市', 8],
+                        ['台南市', 2],
+                        ['花蓮縣', 2],
+                        ['屏東市', 2],
+                        ['屏東市', 3]
+                    ],
+                    type: 'pie'
+                },
+                pie: {
+                    label: {
+                        format: function (value, ratio, id) {
+                            return value;
+                        }
+                    }
+                }
+            });
+            }
+        });
+
+
+        $('a[href][title]').qtip({
+            content: {
+                text: false // Use each elements title attribute
+            },
+            style: 'qtip-blue' // Give it some style
+        });
+        function change_date() {
+            $("#iwantochange").html("<input id='now_date' style='margin-right:10px' type='date'><button type='button' class='btn btn-sm btn-success' onclick='change_text()'>儲存</button>");
+        }
+        function change_text() {
+            $("#iwantochange").html($("#now_date").val());
+        }
+        $('#data_5 .input-daterange').datepicker({
+            keyboardNavigation: false,
+            forceParse: false,
+            autoclose: true
+        });
+    </script>
+</body>
+
+
+
+</html>
